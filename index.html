@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="COLLECTION 001. An independent streetwear project. First release coming January 19, 2027.">
+<title>COLLECTION 001 | First Release</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #080808;
+  --dark: #101010;
+  --panel: #151515;
+  --grey: #888;
+  --white: #ededed;
+  --silver: #bcbcbc;
+  --line: rgba(255,255,255,.13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: .11;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: #eee;
+  color: #080808;
+}
+
+/* NAVIGATION */
+
+nav {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(8,8,8,.94);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 19px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #777;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #aaa;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-status {
+  font-size: 9px;
+  letter-spacing: 2px;
+  border: 1px solid #555;
+  padding: 10px 15px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 850px;
+  height: 100vh;
+  max-height: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 120px 20px 70px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(90,90,90,.19), transparent 52%),
+    linear-gradient(180deg,#101010,#080808 90%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(255,255,255,.012),
+    0 0 0 110px rgba(255,255,255,.009),
+    0 0 0 165px rgba(255,255,255,.006);
+}
+
+.hero::after {
+  content: "001";
+  position: absolute;
+  font-family: 'Cinzel',serif;
+  font-size: clamp(250px,40vw,570px);
+  font-weight: 800;
+  color: rgba(255,255,255,.018);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.eyebrow {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 6px;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  font-family: 'Cinzel',serif;
+  font-size: clamp(50px,10vw,125px);
+  line-height: 1;
+  letter-spacing: -5px;
+  font-weight: 500;
+  text-shadow: 0 0 35px rgba(255,255,255,.13);
+}
+
+.hero h1 span {
+  color: #888;
+}
+
+.hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 7px;
+  color: #aaa;
+  margin-top: 25px;
+}
+
+.hero-line {
+  width: 70px;
+  height: 1px;
+  background: #777;
+  margin: 35px auto;
+}
+
+.hero-description {
+  max-width: 480px;
+  margin: auto;
+  color: #999;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 15px 25px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: 1px solid #777;
+  transition: .3s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #eee;
+  color: #080808;
+  border-color: #eee;
+}
+
+.btn-primary:hover {
+  background: #aaa;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+  padding: 90px 20px;
+  background: #0d0d0d;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.section-label {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.countdown-section h2 {
+  font-family: 'Cinzel',serif;
+  font-size: clamp(26px,5vw,44px);
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.countdown-intro {
+  font-size: 12px;
+  color: #888;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px,4vw,55px);
+  margin: 50px auto 30px;
+  max-width: 650px;
+}
+
+.time-box {
+  min-width: 90px;
+}
+
+.time-box strong {
+  display: block;
+  font-family: 'Cinzel',serif;
+  font-size: clamp(38px,7vw,65px);
+  font-weight: 400;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-box span {
+  display: block;
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 12px;
+}
+
+.countdown-note {
+  color: #666;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* GENERAL SECTIONS */
+
+section.content-section {
+  padding: 115px 8%;
+}
+
+.section-heading {
+  font-family: 'Cinzel',serif;
+  font-size: clamp(30px,5vw,53px);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.section-intro {
+  max-width: 590px;
+  color: #888;
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.about-text p {
+  color: #999;
+  font-size: 13px;
+  line-height: 2.2;
+  margin-bottom: 20px;
+}
+
+.about-visual {
+  min-height: 420px;
+  background:
+    radial-gradient(circle at 50% 35%,#383838,transparent 45%),
+    linear-gradient(145deg,#1d1d1d,#090909);
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-visual::before {
+  content: "001";
+  font-family: 'Cinzel',serif;
+  font-size: 170px;
+  color: rgba(255,255,255,.07);
+}
+
+.about-visual span {
+  font-family: 'Cinzel',serif;
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: #aaa;
+  margin-top: -25px;
+}
+
+/* PHILOSOPHY */
+
+.philosophy {
+  background: #111;
+  text-align: center;
+  padding: 120px 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.philosophy h2 {
+  font-family: 'UnifrakturCook',serif;
+  font-size: clamp(43px,9vw,90px);
+  font-weight: 400;
+  color: #ddd;
+}
+
+.philosophy p {
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-top: 25px;
+}
+
+/* GOALS */
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  margin-top: 55px;
+}
+
+.goal-card {
+  background: linear-gradient(145deg,#171717,#0d0d0d);
+  border: 1px solid #292929;
+  padding: 35px 28px;
+  transition: .3s;
+}
+
+.goal-card:hover {
+  border-color: #777;
+  transform: translateY(-5px);
+}
+
+.goal-number {
+  font-family: 'Cinzel',serif;
+  color: #666;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.goal-card h3 {
+  font-family: 'Cinzel',serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.goal-card p {
+  color: #888;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* COLLECTION IDEAS */
+
+.collection-section {
+  background: #0e0e0e;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.collection-card {
+  min-height: 280px;
+  background: #151515;
+  border: 1px solid #292929;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.collection-card:hover {
+  border-color: #777;
+}
+
+.collection-card::after {
+  content: attr(data-number);
+  position: absolute;
+  right: -8px;
+  bottom: -38px;
+  font-family: 'Cinzel',serif;
+  font-size: 130px;
+  color: rgba(255,255,255,.035);
+}
+
+.card-type {
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.collection-card h3 {
+  font-family: 'Cinzel',serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.collection-card p {
+  color: #888;
+  font-size: 11px;
+  line-height: 1.8;
+  max-width: 230px;
+}
+
+/* ROADMAP */
+
+.roadmap {
+  max-width: 850px;
+  margin: 55px auto 0;
+  position: relative;
+}
+
+.roadmap::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: #444;
+}
+
+.roadmap-item {
+  position: relative;
+  padding: 0 0 50px 45px;
+}
+
+.roadmap-item::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #aaa;
+  border: 2px solid #080808;
+}
+
+.roadmap-item h3 {
+  font-family: 'Cinzel',serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.roadmap-item p {
+  color: #888;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* BRAND STATEMENT */
+
+.statement {
+  background: #141414;
+  padding: 105px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.statement h2 {
+  font-family: 'Cinzel',serif;
+  font-size: clamp(30px,6vw,65px);
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.statement p {
+  margin-top: 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Cinzel',serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.contact p {
+  color: #888;
+  font-size: 12px;
+  line-height: 2;
+  max-width: 430px;
+  margin: 20px auto 30px;
+}
+
+.contact a {
+  display: inline-block;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 7%;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+footer .footer-logo {
+  font-family: 'Cinzel',serif;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+footer p {
+  color: #666;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* ANIMATION */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+  nav {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .nav-status {
+    display: none;
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .goals-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  section.content-section {
+    padding: 85px 6%;
+  }
+}
+
+@media(max-width:520px) {
+  nav {
+    height: 65px;
+  }
+
+  .logo {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    gap: 11px;
+  }
+
+  .nav-links a {
+    font-size: 7px;
+  }
+
+  .eyebrow {
+    letter-spacing: 3px;
+    font-size: 8px;
+  }
+
+  .hero-subtitle {
+    letter-spacing: 3px;
+    font-size: 9px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .countdown {
+    gap: 10px;
+  }
+
+  .time-box {
+    min-width: 65px;
+  }
+
+  .time-box strong {
+    font-size: 36px;
+  }
+
+  .time-box span {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .goals-grid,
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card {
+    min-height: 230px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <a href="#home" class="logo">COLLECTION <span>001</span></a>
+
+  <div class="nav-links">
+    <a href="#about">ABOUT</a>
+    <a href="#goals">GOALS</a>
+    <a href="#collection">COLLECTION</a>
+    <a href="#roadmap">ROADMAP</a>
+  </div>
+
+  <div class="nav-status">FIRST RELEASE · 2027</div>
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<header class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">INDEPENDENT STREETWEAR PROJECT</div>
+
+    <h1>COLLECTION <span>001</span></h1>
+
+    <div class="hero-subtitle">
+      THE BEGINNING OF SOMETHING DIFFERENT
+    </div>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-description">
+      Original designs. Distinctive identity.
+      Built from the ground up.
+
+      Collection 001 marks the beginning
+      of an independent streetwear brand.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#collection" class="btn btn-primary">
+        EXPLORE THE VISION
+      </a>
+
+      <a href="#about" class="btn btn-secondary">
+        OUR PURPOSE
+      </a>
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section">
+
+  <div class="section-label">THE FIRST RELEASE</div>
+
+  <h2>THE COUNTDOWN BEGINS</h2>
+
+  <p class="countdown-intro">
+    Collection 001 is scheduled to launch January 19, 2027.
+  </p>
+
+  <div class="countdown">
+
+    <div class="time-box">
+      <strong id="days">00</strong>
+      <span>DAYS</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="hours">00</strong>
+      <span>HOURS</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="minutes">00</strong>
+      <span>MINUTES</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="seconds">00</strong>
+      <span>SECONDS</span>
+    </div>
+
+  </div>
+
+  <div class="countdown-note" id="countdown-status">
+    JANUARY 19 · 2027
+  </div>
+
+</section>
+
+
+<!-- ABOUT THE BRAND -->
+
+<section class="content-section" id="about">
+
+  <div class="about-grid">
+
+    <div class="reveal">
+
+      <div class="section-label">01 / THE PROJECT</div>
+
+      <h2 class="section-heading">
+        MORE THAN<br>JUST CLOTHING.
+      </h2>
+
+      <p class="section-intro">
+        Collection 001 is the beginning of an independent
+        streetwear brand built around original designs,
+        individual expression, and a recognizable identity.
+      </p>
+
+      <div class="about-text">
+
+        <p>
+          The vision is to create clothing that combines
+          dark gothic influences with vintage and grunge
+          aesthetics.
+        </p>
+
+        <p>
+          Every release will feature original concepts,
+          carefully selected materials, and designs
+          developed to establish a consistent brand identity.
+        </p>
+
+        <p>
+          Rather than producing large quantities of
+          untested inventory, the business will initially
+          use limited pre-order collections to understand
+          customer demand and fund production responsibly.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="about-visual reveal">
+      <span>FIRST RELEASE</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BRAND PHILOSOPHY -->
+
+<section class="philosophy">
+
+  <div class="section-label">THE PHILOSOPHY</div>
+
+  <h2>Not Made To Last.</h2>
+
+  <p>ORIGINALITY · EXPRESSION · INDIVIDUALITY</p>
+
+</section>
+
+
+<!-- BUSINESS GOALS -->
+
+<section class="content-section" id="goals">
+
+  <div class="center reveal">
+
+    <div class="section-label">02 / THE OBJECTIVES</div>
+
+    <h2 class="section-heading">THE GOALS</h2>
+
+    <p class="section-intro">
+      Building a clothing brand takes more than designs.
+      It requires planning, production, customer trust,
+      and consistent improvement.
+    </p>
+
+  </div>
+
+  <div class="goals-grid">
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">01</div>
+
+      <h3>ESTABLISH THE BRAND</h3>
+
+      <p>
+        Develop a recognizable name, logo, visual identity,
+        and consistent design direction.
+      </p>
+
+    </div>
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">02</div>
+
+      <h3>CREATE THE DESIGNS</h3>
+
+      <p>
+        Develop original artwork and finalize the first
+        six clothing concepts for Collection 001.
+      </p>
+
+    </div>
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">03</div>
+
+      <h3>PRODUCE SAMPLES</h3>
+
+      <p>
+        Work with manufacturers to create physical samples
+        and verify quality before selling.
+      </p>
+
+    </div>
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">04</div>
+
+      <h3>REACH $1,000</h3>
+
+      <p>
+        Establish the first sales milestone of $1,000
+        in gross clothing sales.
+      </p>
+
+    </div>
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">05</div>
+
+      <h3>BUILD A CUSTOMER BASE</h3>
+
+      <p>
+        Establish a community around the brand and
+        develop customer relationships.
+      </p>
+
+    </div>
+
+    <div class="goal-card reveal">
+
+      <div class="goal-number">06</div>
+
+      <h3>EXPAND THE COLLECTION</h3>
+
+      <p>
+        Reinvest available profits into future designs,
+        better production, and additional releases.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COLLECTION IDEAS -->
+
+<section class="content-section collection-section" id="collection">
+
+  <div class="center reveal">
+
+    <div class="section-label">03 / THE FIRST RELEASE</div>
+
+    <h2 class="section-heading">COLLECTION 001</h2>
+
+    <p class="section-intro">
+      Six initial clothing concepts.
+      One collection. One starting point.
+
+      These are design directions that will be developed
+      into original finished garments.
+    </p>
+
+  </div>
+
+  <div class="collection-grid">
+
+    <div class="collection-card reveal" data-number="01">
+
+      <span class="card-type">01 / T-SHIRT</span>
+
+      <div>
+        <h3>THE AFTERLIFE TEE</h3>
+        <p>
+          Washed black. Oversized fit.
+          Distressed gothic back artwork.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="collection-card reveal" data-number="02">
+
+      <span class="card-type">02 / HOODIE</span>
+
+      <div>
+        <h3>NO SAINTS</h3>
+        <p>
+          Charcoal oversized hoodie.
+          Embroidered chest branding and
+          large back graphics.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="collection-card reveal" data-number="03">
+
+      <span class="card-type">03 / LONGSLEEVE</span>
+
+      <div>
+        <h3>FORGOTTEN</h3>
+        <p>
+          Faded grey material.
+          Vintage-inspired sleeve artwork.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="collection-card reveal" data-number="04">
+
+      <span class="card-type">04 / SWEATPANTS</span>
+
+      <div>
+        <h3>STATIC</h3>
+        <p>
+          Washed black relaxed fit.
+          Subtle branding and vertical typography.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="collection-card reveal" data-number="05">
+
+      <span class="card-type">05 / T-SHIRT</span>
+
+      <div>
+        <h3>DEADSTOCK</h3>
+        <p>
+          Off-white oversized tee.
+          Distressed vintage graphic.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="collection-card reveal" data-number="06">
+
+      <span class="card-type">06 / ZIP-UP</span>
+
+      <div>
+        <h3>FINAL WARNING</h3>
+        <p>
+          Charcoal zip-up hoodie.
+          Embroidered details and large back artwork.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <p style="text-align:center;color:#666;font-size:10px;letter-spacing:2px;margin-top:30px;">
+    DESIGN CONCEPTS · NOT YET AVAILABLE FOR PURCHASE
+  </p>
+
+</section>
+
+
+<!-- ROADMAP -->
+
+<section class="content-section" id="roadmap">
+
+  <div class="center reveal">
+
+    <div class="section-label">04 / THE PLAN</div>
+
+    <h2 class="section-heading">FROM IDEA TO REALITY.</h2>
+
+    <p class="section-intro">
+      The first release is only the beginning.
+      Each stage is designed to build the foundation
+      for a sustainable clothing business.
+    </p>
+
+  </div>
+
+  <div class="roadmap">
+
+    <div class="roadmap-item reveal">
+
+      <h3>PHASE 01 — BRAND DEVELOPMENT</h3>
+
+      <p>
+        Finalize the brand identity, clothing designs,
+        graphics, typography, and product direction.
+      </p>
+
+    </div>
+
+    <div class="roadmap-item reveal">
+
+      <h3>PHASE 02 — SAMPLING</h3>
+
+      <p>
+        Contact manufacturers, compare production quotes,
+        order samples, and evaluate quality.
+      </p>
+
+    </div>
+
+    <div class="roadmap-item reveal">
+
+      <h3>PHASE 03 — FIRST RELEASE</h3>
+
+      <p>
+        Launch Collection 001 with a limited pre-order
+        period and clearly communicated production terms.
+      </p>
+
+    </div>
+
+    <div class="roadmap-item reveal">
+
+      <h3>PHASE 04 — FIRST $1,000</h3>
+
+      <p>
+        Work toward the first $1,000 in gross sales.
+        Fulfill customer orders and evaluate the actual
+        cost and profitability of production.
+      </p>
+
+    </div>
+
+    <div class="roadmap-item reveal">
+
+      <h3>PHASE 05 — EXPANSION</h3>
+
+      <p>
+        Reinvest available profits, introduce new designs,
+        improve production, and build future collections.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL STATEMENT -->
+
+<section class="statement">
+
+  <div class="section-label">THE FIRST CHAPTER</div>
+
+  <h2>EVERYTHING STARTS SOMEWHERE.</h2>
+
+  <p>COLLECTION 001 · JANUARY 19, 2027</p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section-label">05 / GET IN TOUCH</div>
+
+  <h2>BE PART OF THE BEGINNING.</h2>
+
+  <p>
+    Questions, collaborations, or interest in the
+    upcoming collection?
+
+    Contact us for more information about the project
+    and its first release.
+  </p>
+
+  <!-- CHANGE THIS TO YOUR REAL EMAIL ADDRESS -->
+
+  <a href="mailto:YOUR_EMAIL_HERE"
+     class="btn btn-primary">
+    CONTACT THE BRAND
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">COLLECTION 001</div>
+
+  <p>INDEPENDENT STREETWEAR PROJECT · 2026–2027</p>
+
+  <p>THE BEGINNING.</p>
+
+</footer>
+
+
+<script>
+
+/* ==================================
+   FIRST RELEASE COUNTDOWN
+
+   January 19, 2027
+   Uses the visitor's local timezone.
+================================== */
+
+const releaseDate = new Date(2027, 0, 19, 0, 0, 0);
+
+function updateCountdown() {
+
+  const now = new Date();
+
+  const difference = releaseDate - now;
+
+  const days = document.getElementById("days");
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
+  const status = document.getElementById("countdown-status");
+
+  if (difference <= 0) {
+
+    days.textContent = "00";
+    hours.textContent = "00";
+    minutes.textContent = "00";
+    seconds.textContent = "00";
+
+    status.textContent = "THE SCHEDULED RELEASE DATE HAS ARRIVED.";
+
+    return;
+  }
+
+  const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+  const h = Math.floor(
+    (difference / (1000 * 60 * 60)) % 24
+  );
+
+  const m = Math.floor(
+    (difference / (1000 * 60)) % 60
+  );
+
+  const s = Math.floor(
+    (difference / 1000) % 60
+  );
+
+  days.textContent = String(d).padStart(2, "0");
+  hours.textContent = String(h).padStart(2, "0");
+  minutes.textContent = String(m).padStart(2, "0");
+  seconds.textContent = String(s).padStart(2, "0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+
+/* ==================================
+   SCROLL REVEAL ANIMATIONS
+================================== */
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      entry.target.classList.add("visible");
+
+      observer.unobserve(entry.target);
+
+    }
+
+  });
+
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+
+  observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
